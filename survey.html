@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+
+<html>
+<header>
+  <title>A Sherman Portfolio</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+
+</header>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Aliannea Sherman</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html/#about">About <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html/#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html/#examples">Examples</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html/#courses">Courses</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="jumbotron" id="about">
+    <h1 class="display-4">Swim Lessons Survey</h1>
+    <p class="lead">Using HTML, CSS, JavaScript, and JQuery</p>
+    <hr class="my-4">
+    <p>This is a customer survey written using HTML, CSS, JavaScript, and JQuery to be used by customers to help them choose which class would work best for their child. The survey uses the Swim Lessons department’s prewritten requirements, which we would typically use to assess a child’s swim abilities. Due to COVID-19 precautions, we are no longer able to have assessments for individual children, so I hope we will implement this survey on the RBAC WordPress website. This way, before parents call in to schedule their child for swim lessons, they can assess their child independently and use that knowledge to inform their swim lessons registration. This survey would potentially reduce the number of phone calls we receive from confused parents and improve customer satisfaction with our new procedures.
+    <br/><a href="https://github.com/xistingsherman/RBAC-Swim-Lessons-Survey">Github</a>
+    </p>
+
+  </div>
+
+
+
+    <div id="wrapper">
+    <img id="logo" src="logo.jpg">
+    <br />
+
+      <h1> Which class should you enroll in?</h1>
+      <div class="questions">
+      <p>Welcome back to the Swim Lesson Program at the RBAC! We are excited to get back in the water and teach the community a balance between learning how to swim and having fun. The water is a great equalizer amongst our diverse community and we want everyone to be able to enjoy the water safely. It is our mission to make sure that every person is water safe. Quality swim lessons save lives.<br/> <br/><b>Take this questionnaire to find out which class to sign up for!</b></p>
+
+        <h2>What is the Swimmer's name?</h2>
+        <form>
+          <label for="fname">First name:</label>
+          <input type="text" name="fname" id="fname" onchange="updateName()"/><br/>
+
+        </form>
+      </div>
+
+      <div class="questions"> <h2>How old is <label for="firstname"
+      id="firstname0"></label>?</h2> <form> <label><input type="radio" name="q1"
+      value="parentInfant" required> 6 months-3 years </label><br /> <label><input
+      type="radio" name="q1" value="preschool" required> 3 years-6 years
+      </label><br /> <label><input type="radio" name="q1" value="schoolAge"
+      required> 6 years-13 years </label><br /> <label><input type="radio"
+      name="q1" value="juniorAdult"required> 13 years-17 years </label><br />
+      <label><input type="radio" name="q1" value="adult" required> 18 years or
+      older Vqasw     </form> </div> <br />
+
+
+      <div class="questions">
+        <h2>Is <label for="firstname" id="firstname1"></label> older than 6 months?</h2>
+        <form>
+          <label><input type="radio" name="q2" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q2" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname2"></label> hold their head up on their own?</h2>
+        <form>
+          <label><input type="radio" name="q3" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q3" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Is <label for="firstname" id="firstname3"></label> comfortable putting their face in the water on their own?</h2>
+        <form>
+          <label><input type="radio" name="q4" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q4" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname4"></label> blow bubbles voluntarily?</h2>
+        <form>
+          <label><input type="radio" name="q5" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q5" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Is <label for="firstname" id="firstname5"></label> older than 18 months?</h2>
+        <form>
+          <label><input type="radio" name="q6" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q6" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Does <label for="firstname" id="firstname6"></label> show signs of wanting to swim out of your hands when in the water?</h2>
+        <form>
+          <label><input type="radio" name="q7" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q7" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+
+
+      <div class="questions">
+        <h2>Is <label for="firstname" id="firstname7"></label> fearful of water?</h2>
+        <form>
+          <label><input type="radio" name="q8" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q8" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Is <label for="firstname" id="firstname8"></label> able to float on their belly unassisted</h2>
+        <form>
+          <label><input type="radio" name="q9" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q9" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Is <label for="firstname" id="firstname9"></label> able to do a front glide for 5 ft?</h2>
+        <form>
+          <label><input type="radio" name="q10" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q10" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Is <label for="firstname" id="firstname10"></label> able to swim 5-10 ft unassisted and take one breath, then continue to swim?</h2>
+        <form>
+          <label><input type="radio" name="q11" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q11" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname11"></label> swim 15 feet unassisted with multiple breaths?</h2>
+        <form>
+          <label><input type="radio" name="q12" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q12" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname12"></label> comfortably swim 20 – 25 feet unassisted with multiple breaths?</h2>
+        <form>
+          <label><input type="radio" name="q13" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q13" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname13"></label> swim 25 yards of Freestyle and Backstroke correctly, comfortably, and without assistance?</h2>
+        <form>
+          <label><input type="radio" name="q14" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q14" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname14"></label> swim Elementary Backstroke comfortably?</h2>
+        <form>
+          <label><input type="radio" name="q15" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q15" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname15"></label> retrieve an object from a 5 foot depth without assistance?</h2>
+        <form>
+          <label><input type="radio" name="q16" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q16" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname16"></label> swim 50 yards of Freestyle and Backstroke?</h2>
+        <form>
+          <label><input type="radio" name="q17" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q17" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname17"></label> swim 25 yards of Breaststroke?</h2>
+        <form>
+          <label><input type="radio" name="q18" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q18" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Is <label for="firstname" id="firstname18"></label> familiar with the butterfly kick?</h2>
+        <form>
+          <label><input type="radio" name="q19" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q19" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname19"></label> tread water using an egg beater kick?</h2>
+        <form>
+          <label><input type="radio" name="q20" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q20" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Is <label for="firstname" id="firstname20"></label> comfortable submerging their face in the water?</h2>
+        <form>
+          <label><input type="radio" name="q21" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q21" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Is <label for="firstname" id="firstname21"></label> able to float on their belly unassisted?</h2>
+        <form>
+          <label><input type="radio" name="q22" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q22" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Is <label for="firstname" id="firstname22"></label> able to do a front glide for 5 feet?</h2>
+        <form>
+          <label><input type="radio" name="q23" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q23" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname23"></label> comfortably swim 20 feet unassisted with multiple breaths?</h2>
+        <form>
+          <label><input type="radio" name="q24" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q24" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname25"></label> do a back glide?</h2>
+        <form>
+          <label><input type="radio" name="q25" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q25" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname26"></label> tread water?</h2>
+        <form>
+          <label><input type="radio" name="q26" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q26" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname27"></label> swim 30 feet using the ½ noodle doing rainbow arms?</h2>
+        <form>
+          <label><input type="radio" name="q27" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q27" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname28"></label> kick on their back using a kickboard or noodle for 30 feet?</h2>
+        <form>
+          <label><input type="radio" name="q28" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q28" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname29"></label> swim 50 yards of Freestyle?</h2>
+        <form>
+          <label><input type="radio" name="q29" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q29" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname30"></label> swim 50 yards of Backstroke?</h2>
+        <form>
+          <label><input type="radio" name="q30" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q30" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname31"></label> swim 25 yards of Elementary Backstroke?</h2>
+        <form>
+          <label><input type="radio" name="q31" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q31" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname32"></label> swim 100 yards of Freestyle?</h2>
+        <form>
+          <label><input type="radio" name="q32" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q32" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname33"></label> backstroke with proper form?</h2>
+        <form>
+          <label><input type="radio" name="q33" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q33" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname34"></label> swim 50 yards of Breaststroke?</h2>
+        <form>
+          <label><input type="radio" name="q34" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q34" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Can <label for="firstname" id="firstname35"></label> swim all 4 competitive strokes with proper form and efficient technique?</h2>
+        <form>
+          <label><input type="radio" name="q35" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q35" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Is <label for="firstname" id="firstname36"></label> proficient with deep water and distance swimming?</h2>
+        <form>
+          <label><input type="radio" name="q36" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q36" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+
+
+
+      <div class="questions">
+        <h2>Are you fearful of the water or inexperienced?</h2>
+        <form>
+          <label><input type="radio" name="q37" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q37" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+      <div class="questions">
+        <h2>Are you able to float on your back while kicking?</h2>
+        <form>
+          <label><input type="radio" name="q38" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q38" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+      <div class="questions">
+        <h2>Are you comfortable standing in a depth where you are not able to stand on the pool floor?</h2>
+        <form>
+          <label><input type="radio" name="q39" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q39" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Are you interested in training for a triathlon?</h2>
+        <form>
+          <label><input type="radio" name="q40" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q40" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Have you done a triathlon before?</h2>
+        <form>
+          <label><input type="radio" name="q41" value="yes">
+            Yes
+          </label><br />
+          <label><input type="radio" name="q41" value="no">
+            No
+          </label><br />
+        </form>
+      </div>
+
+      <div class="questions">
+        <h2>Cannot take classes yet.</h2>
+          <p>For safety reasons, we currently do not offer classes for infants that are under 6 months old or cannot hold their head up on their own.</p>
+      </div>
+      <div class="questions">
+        <h2>Parent Infant Beginner – Rubber Ducky</h2>
+          <p>This level is a priceless parent infant bonding class that allows children to be stimulated in a new environment and eventually feel comfortable being in the water. Parents will learn to interact with their child safely in the water.</p>
+      </div>
+      <div class="questions">
+        <h2>Parent Infant Intermediate – Baby Beluga</h2>
+          <p>This level is a priceless parent infant bonding class, in which the infant already feels comfortable in the water. Parents will be encouraged to allow their infants to voluntarily put their face in the water and blow bubbles. An instructor will facilitate group activities that promote safe water exploration for infants.</p>
+      </div>
+      <div class="questions">
+        <h2>Parent Preschool – Sea Otters</h2>
+          <p>This level is designed for avid toddlers that want to explore the water more freely while still having their parents by their side. They will be introduced to important swimming and survival skills. Depending on how receptive the toddler is, they may even begin to swim short distances on their own.</p>
+      </div>
+      <div class="questions">
+        <h2>Preschool 1 Beginner – Pufferfish</h2>
+          <p>This level is designed to introduce the inexperienced or fearful child to the water.</p>
+      </div>
+      <div class="questions">
+        <h2>Preschool 1 – Starfish </h2>
+          <p>This level is designed to help students feel comfortable in the water and to enjoy the water safely. Children will learn how to enter and exit the pool, hold their breath, blow bubbles, and put their face in the water. They will also learn to float on their belly, back and learn a front glide.</p>
+      </div>
+      <div class="questions">
+        <h2>Preschool 2 – Seahorse</h2>
+          <p>This level introduces true locomotion skills. Children expand on their front glides to learn how to travel through the water without support. Breath control is introduced and taking a voluntary breath is practiced until mastered.</p>
+      </div>
+      <div class="questions">
+        <h2>Preschool 3 – Clownfish</h2>
+          <p>The objective of this level is to increase confidence and water independence. Children will learn to come up for a breath independently and rhythmically. They will become comfortable with distance and deep water swimming. Change of direction is mastered and diving to the bottom of the shallow pool to retrieve an object is introduced. Children also learn how to enter and exit from the side of the pool deck.</p>
+      </div>
+      <div class="questions">
+        <h2>Preschool 3 Endurance – Penguin</h2>
+          <p>The objective of this level is to develop the endurance necessary for Preschool 4. Children will practice swimming 20-25 feet with multiple breaths. Children will be introduced to side breathing with assistance, rainbow arms with assistance, and kicking on their back with assistance.</p>
+      </div>
+      <div class="questions">
+        <h2>Preschool 4 – Spotted Seal </h2>
+          <p>This level is introduces the three strokes – Freestyle, Elementary Backstroke, and Backstroke. Treading water, recovery to a swimming position, and change of direction is mastered.</p>
+      </div>
+      <div class="questions">
+        <h2>Preschool 5 – Dolphin </h2>
+          <p>The level refines the Freestyle and Backstroke technique. Endurance will increase as swimmers practice strokes in 50 yard increments. Breaststroke dolphin kicks, and treading water with an egg beater kick are introduced.</p>
+      </div>
+      <div class="questions">
+        <h2>Preschool 6 – Hammerhead Shark</h2>
+          <p>The objective of this level is to prepare students to join a formal swim team. The four competitive strokes are mastered: Freestyle, Backstroke, Breaststroke, and Butterfly. Swim team prep such as racing starts, racing dives, and flip turns, will be covered.</p>
+      </div>
+      <div class="questions">
+        <h2>School Age 1 – Turtle</h2>
+          <p>The objective of this level is to help students feel comfortable in the water and to enjoy the water safely. Children will learn how to enter and exit the pool safely, hold their breath, blow bubbles, and put their face in the water. They will learn how to float on their belly, float on their back, and how to do a front glide.</p>
+      </div>
+      <div class="questions">
+        <h2>School Age 2 – Octopus</h2>
+          <p>The objective of this level is to introduce true locomotion skills. Since children already know how to glide, they can now travel through the water with the use of their arms and legs. They will learn how to flutter kick and swim with a basic paddle stroke. They will master floating on their belly and their back. They will continue to work on their front glide and will be taught how to back glide. They will practice treading water. Breath control and taking a voluntary breath is practiced until mastered.</p>
+      </div>
+      <div class="questions">
+        <h2>School Age 3 – Manta Ray</h2>
+          <p>The objective of this level is to increase confidence and water independence. Change of direction and diving to the bottom of the shallow pool to retrieve an object is mastered. Students are introduced to aspects of Freestyle and Backstroke. Treading water, recovery to a swimming position, and change of direction are mastered. Water safety is achieved!</p>
+      </div>
+      <div class="questions">
+        <h2>School Age 3 Endurance – Polar Bear</h2>
+          <p>The objective of this level is to develop the endurance necessary for School Age 4. Students will be taught to swim Freestyle and Backstroke without assistance. They will learn how to circle swim, and how to swim with fins. They will be taught a safety stroke (Elementary Backstroke) for in the event that they are too tired to finish the lap.</p>
+      </div>
+      <div class="questions">
+        <h2>School Age 4 – Crocodile</h2>
+          <p>The objective of this level is to allow students to develop their natural rhythm when swimming Freestyle and Backstroke. They will become comfortable with distance and deep water swimming. Students will be taught a new stroke: Breaststroke.</p>
+      </div>
+      <div class="questions">
+        <h2>School Age 5 – Killer Whale</h2>
+          <p>The objective of this level is to learn 2 new strokes: Sidestroke and Butterfly. Endurance and stamina will continue to increase as students practice swimming 100+ yards of each stroke. Treading water with an egg beater kick will be taught.</p>
+      </div>
+      <div class="questions">
+        <h2>School Age 6 – Great White Shark </h2>
+          <p>The objective of this level is to prepare students for a formal swim team. The four competitive strokes are mastered: Freestyle, Backstroke, Breaststroke, and Butterfly. Swim team prep such as racing starts, racing dives, and flip turns will be covered.</p>
+      </div>
+      <div class="questions">
+        <h2>Junior Adult Swim Lessons</h2>
+          <p>Whether a complete beginner or an experienced swimmer, this class allows teens to comfortably learn how to swim amongst their peers. As they build their confidence, they will master breath control, learn how to float, kick with proper form, and will eventually be taught true strokes.</p>
+      </div>
+      <div class="questions">
+        <h2>Adult – Beginner</h2>
+          <p>This class is designed to introduce the fearful or inexperienced adult to the water. Adults will learn how to relax and feel comfortable in the water. Once a certain level of comfort is achieved adults will be taught breath control, how to float on their belly and back, glide, and then progress to a basic paddle stroke. Freestyle will be taught and practiced until mastered. Adults will also learn to float on their back while kicking.</p>
+      </div>
+      <div class="questions">
+        <h2>Adult – Intermediate/ Advanced</h2>
+          <p>This course covers refining Freestyle and increasing one’s endurance from 150 yards to 400+ yards of Freestyle. Adults will be taught a progression of new strokes: Backstroke, Breaststroke, and Butterfly. Adults will begin to develop more strength and power as they swim. Once the class starts swimming sets, they will learn open turns and flip turns. Water safety is achieved!</p>
+      </div>
+      <div class="questions">
+        <h2>Triathlon Training – Beginner</h2>
+          <p>When training for the swimming portion of a triathlon, it is important to first feel comfortable in the water. This class will not only teach you how to feel comfortable, but will provide you with enough stroke proficiency to complete any desired distance. Typically, adults are most efficient when swimming Freestyle, so that stroke will be emphasized throughout the course of the class.</p>
+      </div>
+      <div class="questions">
+        <h2>Triathlon Training – Intermediate/Advanced</h2>
+          <p>This course is designed to provide Triathletes with an experienced coach while they train for their next Triathlon. Long distance swimming will be emphasized while the instructor breaks down everyone’s stroke so that they swim as efficiently as possible.</p>
+      </div>
+
+
+      <input type="button" id='next' value="Next" onclick="next()">
+      <br /><br/>
+      <div id="answer">Your result will show up here!</div>
+      <br />
+
+      <input type="button" id='reset' value="Reset" onclick="reset()">
+      <br />
+
+    </div>
+
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="js/script.js"></script>
+  </body>
+
+</html>
