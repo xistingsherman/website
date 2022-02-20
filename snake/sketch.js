@@ -3,45 +3,65 @@ let bgColor = 126;
 
 let snake = [];
 
-let gap = 15;
+let gapX;
+let gapY;
 let y = 0;
 let x = 0;
 
 let headX;
 let headY;
 
+let ballSize = 20;
+
 let score = 0;
 
 let directions = [];
 
 let restartButton;
+let pauseButton;
+
+let endGame = false;
 
 let foodX;
 let foodY;
-let foodSize;
+let foodSize = 15;
 
 let foodBool;
 
+let previousX;
+let previousY;
+
 function setup() {
-    // Canvas size 400*400
-    createCanvas(400, 400);
+    createCanvas(600, 600);
     textSize(50);
     noCursor();
-
-    snake.push(1);
-    snake.push(1);
+    frameRate(8);
+    
 
     headX = width/2;
     headY = height/2;
 
+    snake.push(createVector(headX,headY));
+
     foodBool = true;
     createFood();
+
+
+    pauseButton = createButton("Pause");
+    pauseButton.position(width/2, 0);
+    pauseButton.mousePressed(pause);
+
+    restartButton = createButton("Restart");
+    //restartButton.position(0, 0);
+    restartButton.mousePressed(restart);
+
 
 }
 
 function draw() {
     // Background color gray
     background(bgColor);
+    noStroke();
 
     if(foodBool){
       push();
@@ -54,87 +74,112 @@ function draw() {
       createFood();
     }
 
-    if(headX < width - 10 && headX > 10 && headY < height - 10 && headY > 10){
-      for(let i = 0; i < snake.length; i++){
-          headX = headX - x;
-          headY = headY - y;
-          circle(headX + gap * i, headY + gap * i, 20);
+    headX = headX - x;
+    headY = headY - y;
 
-          if( (headX - 20 <= foodX && foodX + foodSize <= headX + 20) && (headY - 20 <= foodY && foodY + foodSize <= headY + 20) ){
-            eatFood();
-          }
-      }
+    if(headX < width - ballSize/2 && headX > ballSize/2 && headY < height - ballSize/2 && headY > ballSize/2){
+        snake.pop();
+        snake.unshift(createVector(headX,headY));
 
-      if(keyCode === LEFT_ARROW || key =="a"){
-          headX--;
-          x = 0;
-      }
-      else if(keyCode === RIGHT_ARROW || key == "d"){
-          headX++;
-          x = 0;
-      }
-      else if(keyCode == UP_ARROW || key == "w"){
-          headY--;
-          y = 0;
-      }
-      else if(keyCode == DOWN_ARROW || key == "s"){
-          headY++;
-          y = 0;
-      }
+        circle(snake[0].x, snake[0].y, ballSize)
+         //draw head of the snake
+  
+        if( (headX - ballSize <= foodX && foodX + foodSize <= headX + ballSize) && (headY - ballSize <= foodY && foodY + foodSize <= headY + ballSize) ){
+          eatFood(headX,headY);
+        }
+
+        for(let i = 0; i < snake.length -1; i++){
+            
+            previousX = snake[i+1].x;
+            previousY = snake[i+1].y;
+            circle(previousX, previousY, ballSize);
+        }
+    }
+    else if(endGame){
+        gameOver();
     }
     else{
-      foodBool = false;
-      textAlign(CENTER);
-      text("Game Over!", width/2, height/2);
-
-      restartButton = createButton("Restart");
-      restartButton.position(0, 0);
-      restartButton.mousePressed(restart);
-      
+        gameOver();
     }
+    
+    
 }
 
 function keyPressed() {
-  if (keyCode === LEFT_ARROW || key =="a") {
-    x = -1;
-    directions.push("L");
-  } else if (keyCode === RIGHT_ARROW || key == "d") {
-    x = 1;
-    directions.push("R");
-  } else if(keyCode == UP_ARROW || key == "w"){
-    y = -1;
-    directions.push("U");
-  }
-  else if(keyCode == DOWN_ARROW || key == "s"){
-    y = 1;
-    directions.push("D");
-  }
-  //print(directions);
+    //update this to change speed of the snake
+    if((keyCode === LEFT_ARROW || key =="a") && x != -ballSize){
+        print(x)
+        
+        x = ballSize;
+        
+        y = 0;
+    }
+    else if(keyCode === LEFT_ARROW || key =="a"){
+        gameOver();
+    }
+
+    if((keyCode === RIGHT_ARROW || key == "d") && x != ballSize){
+        x = -ballSize;
+        y = 0;
+    }
+    else if(keyCode === RIGHT_ARROW || key == "d"){
+        gameOver();
+    }
+
+    if((keyCode == UP_ARROW || key == "w") && y != -ballSize){
+        y = ballSize;
+        x = 0;
+    }
+    else if(keyCode == UP_ARROW || key == "w"){
+        gameOver();
+    }
+
+    if((keyCode == DOWN_ARROW || key == "s") && y != ballSize){
+        y = -ballSize;
+        x = 0;
+    }
+    else if(keyCode == DOWN_ARROW || key == "s"){
+        gameOver();
+    }
 }
 
-function eatFood(){
+function eatFood(headX,headY){
   foodBool = false;
   score++;
-  snake.push(1);
+  snake.unshift([headX,headY]);
 
   createFood();
-  print(score);
+  //print(score);
 }
 
 function createFood(){  
   foodBool = true;
-  foodSize = 15;
-
-  foodX = random(10, width-20);
-  foodY = random(10,height-20);
+  foodX = random(10, width-foodSize);
+  foodY = random(10, height-foodSize);
   foodColor = color(random(0,255),random(0,255),random(0,255))
 }
 
+function gameOver(){
+    headX = width;
+    headY = height;
+    gameEnd = true;
+    foodBool = false;
+    textAlign(CENTER);
+    text("Game Over!", width/2, height/2);
+    //restartButton = createButton("Restart");
+    //restartButton.position(0, 0);
+    //restartButton.mousePressed(restart);
+}
+
 function restart(){
-  restartButton.remove();
+  //restartButton.remove();
   headX = width/2;
   headY = height/2;
 
   snake = [];
   snake.push("1");
+}
+
+function pause(){
+    noLoop();
 }
