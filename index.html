@@ -2,23 +2,27 @@
 
 <html>
 <header>
-  <title>A Sherman Portfolio</title>
+  <title>Aliannea Sherman Portfolio</title>
 
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
 </header>
 
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Aliannea Sherman</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="nav navbar-nav navbar-right">
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav navbar-right mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
         </li>
@@ -27,9 +31,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#examples">Examples</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#certificates">Certificates</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#courses">Courses</a>
@@ -44,21 +45,21 @@
     </div>
   </nav>
 
-  <div class="container row">
+<div class="container">
+  <div class="row">
     <div class="jumbotron" id="about">
       <img id="headshot" class="rounded float-left" src="images/headshot_small.jpg" alt="Photo of Aliannea Sherman" width="250">
-      <h1 class="display-4">Aliannea Sherman</h1>
-      <p class="lead">Graduate Student in Computer Science at California State University, Los Angeles</p>
+      <h1 class="display-5">Aliannea Sherman</h1>
+      <p class="lead">Graduate Student in Computer Science</p>
 
-      <p>My name is Aliannea Sherman, and I am currently a graduate student at CalStateLA, studying Computer Science, and specializing in software engineering and data science. I have decided to pursue Computer Science because of my passion for creativity and problem-solving. I am interested in an software engineering, data science, web development, and human computer interaction (HCI). </p>
+      <p>I am studying Computer Science, and specializing in software engineering and data science. I have decided to pursue Computer Science because of my passion for creativity and problem-solving. I am interested in an software engineering, data science, web development, and human computer interaction (HCI). </p>
     </div>
-
+  </div>
 
 
     <h1 class="display-5" id="projects">Projects</h1>
 
-
-    <div class="card-deck" id="projects">
+<div class="row">
       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
         <div class="card">
           <!--<img src="..." class="card-img-top" alt="..."> -->
@@ -87,20 +88,18 @@
       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Small Business Webite</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary disabled">Go somewhere</a>
+            <h5 class="card-title">Snake Game</h5>
+            <p class="card-text">A classic snake game created using JavaScript and the p5.js library. This game is the perfect cure for your nostalgia.</p>
+            <a href="https://alianneasherman.com/web/snake/index.html" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
-
       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
         <div class="card">
           <div class="card-body">
              <img class="card-img-top" src="images/cyoa.png" alt="Choose Your Own Adventure">
             <h5 class="card-title">CYOA Game</h5>
             <p class="card-text">A simple Choose Your Own Adventure Game, created with Unity and C#. You are taking your dog for a walk when he inconveniently poops on the neighbor's lawn. Will you be a decent person and pick up your dog's poop?
-              <br><a href="https://alianneasherman.com/web/cyoa/index.html">Play CYOA Game</a>
             </p>
             <a href="https://alianneasherman.com/web/cyoa/index.html" class="btn btn-primary">Play CYOA Game</a>
           </div>
@@ -113,7 +112,6 @@
             <img class="card-img-top" src="images/bbgame2.png" alt="Block Breaker Game">
             <h5 class="card-title">Block Breaker Game</h5>
             <p class="card-text">Your classic Block Breaker game, this was styled as a kid jumping on a bed after bedtime to eat the candy floating in his room. This game was created using Unity and C#.
-              <br><a href="https://alianneasherman.com/web/bb/index.html">Play Block Breaker Game</a>
             </p>
             <a href="https://alianneasherman.com/web/bb/index.html" class="btn btn-primary">Play Block Breaker Game</a>
           </div>
@@ -132,175 +130,157 @@
     </div>
 
 
-
-
-    <h1 class="display-5 col-6" id="examples">Examples</h1>
-    <h3>Javascript</h3>
-    <p>
-      <a class="btn btn-primary" data-toggle="collapse" href="../examples/movie.html" target="_blank" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Movie Seat Picker</a>
-      <a class="btn btn-primary" data-toggle="collapse" href="../examples/meditation.html" target="_blank" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Breathing App</a>
-      <div class="row">
-        <div class="col">
-          <div class="collapse multi-collapse" id="multiCollapseExample1">
-            <div class="card card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="collapse multi-collapse" id="multiCollapseExample2">
-            <div class="card card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-            </div>
-          </div>
-        </div>
-
+<h1 class="display-5" id="examples">Examples</h1><br>
+<div class="row">
+<div class="col-sm-6 apps">
+    <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Movie Seat Picker</h5>
+    <p class="card-text">Movie seat picker allows you to click on available seats in a movie theater and see the cost of tickets.</p>
+    <a href="https://alianneasherman.com/web/examples/movie.html" class="btn btn-primary">Demo</a>
+  </div>
 </div>
-
-        <div class="container">
-          <div class="row">
-
-        <h1 class="display-5" id="certificates">Certificates</h1>
-      </div>
-      <div class="row">
-          <div class="col-lg 3 col-md-3 col-sm-12 col-xs-12">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">CodeAcademy</h5>
-
-            <ul class="list-group list-group-flush">
-              <a href="./certificates/ca_csharp.pdf"><li class="list-group-item">Learn C# Course</li></a>
-              <a href="./certificates/ca_nodejs.pdf"><li class="list-group-item">Learn Node.js Course</li></a>
-              <li class="list-group-item">Learn C++ Course</li>
-              <li class="list-group-item">Learn React.js Course</li>
-              <li class="list-group-item">Learn PHP Course</li>
-              <li class="list-group-item">Learn Ruby Course</li>
-            </ul>
-
-          </div>
-        </div>
-      </div>
-        <div class="col-lg 3 col-md-3 col-sm-12 col-xs-12">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Udemy</h5>
-
-            <ul class="list-group list-group-flush">
-              <a href="https://www.udemy.com/certificate/UC-247b6b69-13e1-4eec-a388-1c272bcd8f2d/"><li class="list-group-item">1 Hour of HTML</li></a>
-              <a href="https://www.udemy.com/certificate/UC-b15cfabe-d25e-442e-9d21-05d3a6fa672e/"><li class="list-group-item">1 Hour of CSS</li></a>
-              <a href="https://www.udemy.com/certificate/UC-5da323a8-a6e2-4c8d-b6b9-aa82166ce377/"><li class="list-group-item">1 Hour jQuery</li></a>
-              <li class="list-group-item">Learn HTML5 in 1 Hour</li>
-              <li class="list-group-item">The Web Developer Bootcamp</li>
-              <li class="list-group-item">JSON in Action</li>
-            </ul>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
+</div>
+<div class="col-sm-6 apps">
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Breathing App</h5>
+    <p class="card-text">The breathing app is a meditation app that guides you in breathing in and breathing out.</p>
+    <a href="https://alianneasherman.com/web/examples/meditation.html" class="btn btn-primary">Demo</a>
+  </div>
+</div>
+</div>
+</div>
 
 
       <h1 class="display-5"  id="courses">Courses</h1>
+      <div class="row">
       <table class="table">
         <thead>
           <th scope="col">Course #</th>
           <th scope="col">Term</th>
           <th scope="col">Brief Description</th>
-          <th scope="col">Grade</th>
+
         </thead>
+
+        <tr>
+          <td>CS 5661 - Topics in Data Science</td>
+          <td>Spring 2021</td>
+          <td>An examination of the primary data science algorithms and tools that implement them.</td>
+
+        </tr>
+
+        <tr>
+          <td>CS 5390 - Advanced Software Architecture</td>
+          <td>Fall 2020</td>
+          <td>Design and development of large-scale software systems; integration of legacy systems; multiple architectural views, representation and documentation; software architecture styles; software architecture design; software quality attributes; software architecture evaluation.</td>
+
+        </tr>
+        <tr>
+          <td>CS 4661 - Intro to Data Science</td>
+          <td>Fall 2020</td>
+          <td>Algorithms, tools, and techniques for extracting knowledge or insight from large-scale data, and use it for future purposes such as prediction, classification, and visualization.</td>
+
+        </tr>
+        <tr>
+          <td>CS 4555 - Intro 3D Computer Game Programming</td>
+          <td>Fall 2020</td>
+          <td>3D game genre and styles; 3D game engines and their components; scripts; GUI; models; textures; sound and music; hands-on experience and rapid development.</td>
+
+        </tr>
+        <tr>
+          <td>CS 4222 - Principles of Database Systems</td>
+          <td>Fall 2020</td>
+          <td>Database system architecture; disk and file management; buffer management; record file structures; database catalog; concurrency control; failure recovery; query processing; indexes; query optimization.</td>
+
+        </tr>
         <tr>
           <td>CS 3112 - Analysis of Algorithms</td>
           <td>Summer 2020</td>
           <td>Methods for the design and analysis of correct and efficient computer algorithms; applications to classical problems of searching, sorting, graph optimization and combinatorial optimization</td>
-          <td>A-</td>
+
         </tr>
         <tr>
           <td>CS 2148 - Discrete Structures</td>
           <td>Spring 2020</td>
           <td>Intro to discrete math with applications to Computer Science; fundamentals of logic and set theory, counting techniques, relations, induction and recursion; graphs and trees; probability theory</td>
-          <td>A</td>
+
         </tr>
         <tr>
           <td>CS 3035 - Programming Language Paradigms</td>
           <td>Spring 2020</td>
           <td>Use and implementation of Python and Haskell; functional programming; concurrent/reactive programming; constraint (logic) programming; rule-based programming; aspect-oriented programming; domain-specific languages</td>
-          <td>A</td>
+
         </tr>
         <tr>
           <td>CS 3186 - Introduction to Automata Theory</td>
           <td>Spring 2020</td>
           <td>Formal approach to automata thoery; finite state machines; regular expressions, regular language, context-free languages, and Turing machines. Develops mathematical foundation for Computer Science</td>
-          <td>A-</td>
+
         </tr>
         <tr>
           <td>CS 4440 - Introduction to Operating Systems</td>
           <td>Fall 2019</td>
           <td>Resource, memory and process management; concurrent processing, distributed systems, emphasis on some of the simple algorithms used to solve common prolems encountered such as deadlocks, queue service, shared/distributed memory access</td>
-          <td>A</td>
+
         </tr>
         <tr>
           <td>CS 3220 - Web and Internet Programming</td>
           <td>Spring 2017</td>
           <td>Development of data-base driven, multi-tiered, interactive web applications. HTML and CSS; processing HTTP requests and generating HTTP responses; session tracking; database access; web application architectures, server-side and client-side scripting languages</td>
-          <td>B</td>
+
         </tr>
         <tr>
           <td>CS 3337 - Software Engineering</td>
           <td>Fall 2016</td>
           <td>Methodologies and tools for requirements analysis and design of large complex software system; process models, project planning, tracking, documentation, communication, and quality assurance; group lab project with oral and written presentations</td>
-          <td>A</td>
+
         </tr>
         <tr>
           <td>CS 245 - Computer Organization, Operating Systems & Networks</td>
           <td>Spring 2016</td>
           <td>Essential information about computer organization, operating systems, and computer networks for programmers. Topics include: computer organization, data representation, the Windows/UNIX/LINUX operating system, and computer networks.</td>
-          <td>A</td>
+
         </tr>
         <tr>
           <td>CS 203 - Programming with Data Structures</td>
           <td>Winter 2016</td>
           <td>Advanced programming techniques; data structures such as linked lists, stacks, queues, trees, hash tables, skip lists, and graphs; sorting and searching algorithms; basic algorithm analysis; activities and software development</td>
-          <td>A-</td>
         </tr>
         <tr>
           <td>CS 242 - C Programming</td>
           <td>Summer 2015</td>
           <td>Intro to program design and problem solving using the C programming language. Programming topics include control structures, functions, arrays, pointers, and file I/O</td>
-          <td>A</td>
         </tr>
         <tr>
           <td>CS 202 - Intro to Object Oriented Programming</td>
           <td>Spring 2015</td>
           <td>Algorithm development for Object Oriented Programming; inheritance, polymorphism, recursion, GUI basics, designing, coding, and documenting programs;  activities based on problem analysis and software development</td>
-          <td>A-</td>
         </tr>
         <tr>
           <td>CS 201 - Intro to Programming</td>
           <td>Fall 2014</td>
           <td>Intro to algorithms; designing, coding, debugging, documenting programs; implementation of algorithms as structured programs in high level language; activities based on problem analysis and software development</td>
-          <td>A-</td>
         </tr>
         <tr>
           <td>CS 122 - Relational Databases & SQL</td>
           <td>Fall 2014</td>
           <td>Database design using Entity-Relationship, relational, and object-oriented data modeling; database implementation; use of SQL, including selection join, subquery, and aggregation</td>
-          <td>A</td>
         </tr>
         <tr>
           <td>CS 120 - Intro to Website Development</td>
           <td>Fall 2007</td>
           <td>Development of client-side web pages using HTML, CSS, and Javascript</td>
-          <td>B-</td>
         </tr>
 
       </table>
     </div>
+  </div>
 
 
     <!--<embed src="examples/movie.html" style="width:500px; height: 300px;">-->
     <!-- Look into modals for showing certificates-->
-  </body>
+    </body>
   <footer>
   </footer>
 

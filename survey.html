@@ -14,7 +14,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="index.html">Aliannea Sherman</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -35,26 +35,32 @@
       </ul>
     </div>
   </nav>
-
+<div class="container row">
   <div class="jumbotron" id="about">
     <h1 class="display-4">Swim Lessons Survey</h1>
     <p class="lead">Using HTML, CSS, JavaScript, and JQuery</p>
     <hr class="my-4">
-    <p>This is a customer survey written using HTML, CSS, JavaScript, and JQuery to be used by customers to help them choose which class would work best for their child. The survey uses the Swim Lessons department’s prewritten requirements, which we would typically use to assess a child’s swim abilities. Due to COVID-19 precautions, we are no longer able to have assessments for individual children, so I hope we will implement this survey on the RBAC WordPress website. This way, before parents call in to schedule their child for swim lessons, they can assess their child independently and use that knowledge to inform their swim lessons registration. This survey would potentially reduce the number of phone calls we receive from confused parents and improve customer satisfaction with our new procedures.
+    <p>This is a customer survey written using HTML, CSS, JavaScript, and JQuery to be used by customers to help
+      them choose which class would work best for their child. All questions and answers have been harcoded in html.
+      The questions will appear based on how the previous question was answered, with a predefined result for each
+      set of responses. The survey uses the prewritten requirements, which could be used to assess a child’s swim abilities.
+      This way, before parents call in to schedule their child for swim lessons, they can assess their child independently
+      and use that knowledge to inform their swim lessons registration. The purpose of this survey was to reduce the number
+      of phone calls received from confused parents and improve customer satisfaction with new procedures.
     <br/><a href="https://github.com/xistingsherman/RBAC-Swim-Lessons-Survey">Github</a>
     </p>
 
   </div>
 
+<div class="jumbotron row">
 
 
     <div id="wrapper">
-    <img id="logo" src="logo.jpg">
     <br />
 
       <h1> Which class should you enroll in?</h1>
       <div class="questions">
-      <p>Welcome back to the Swim Lesson Program at the RBAC! We are excited to get back in the water and teach the community a balance between learning how to swim and having fun. The water is a great equalizer amongst our diverse community and we want everyone to be able to enjoy the water safely. It is our mission to make sure that every person is water safe. Quality swim lessons save lives.<br/> <br/><b>Take this questionnaire to find out which class to sign up for!</b></p>
+      <p>Welcome back to the Swim Lesson Program at the recreation center! We are excited to get back in the water and teach the community a balance between learning how to swim and having fun. The water is a great equalizer amongst our diverse community and we want everyone to be able to enjoy the water safely. It is our mission to make sure that every person is water safe. Quality swim lessons save lives.<br/> <br/><b>Take this questionnaire to find out which class to sign up for!</b></p>
 
         <h2>What is the Swimmer's name?</h2>
         <form>
@@ -665,9 +671,8 @@
       <br />
 
     </div>
-
-
-
+  </div>
+</div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="js/script.js"></script>
   </body>
