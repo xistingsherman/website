@@ -6,7 +6,9 @@ const Currency = function(Currency) {
   this.currency = Currency.currency;
 };
 Currency.create = (id, newCurrency, result) => {
-  sql.query("INSERT INTO user_currency SET ?", newCurrency, (err, res) => {
+  sql.query("INSERT INTO user_currency SET userId = ?, currency = ?", 
+  [id, newCurrency.currency], 
+  (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(err, null);
@@ -18,7 +20,7 @@ Currency.create = (id, newCurrency, result) => {
 };
 
 Currency.findById = (id, result) => {
-  sql.query(`SELECT * FROM user_currency WHERE id = ${id}`, (err, res) => {
+  sql.query(`SELECT * FROM user_currency WHERE userId = ${id}`, (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(err, null);
