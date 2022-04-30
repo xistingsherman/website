@@ -6,10 +6,12 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
-    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="https://alianneasherman.com">Aliannea Sherman</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,6 +39,34 @@
               <a class="nav-link" href="https://github.com/xistingsherman">Github</a>
             </li>
           </ul>
+          <span class="span">
+            <script type="text/JavaScript">
+              
+              let username = getCookie("username");
+              let points = getCookie("points");
+  
+              $(".span").html("Hello, " + username + ". You've racked up " + points + " points.");
+      
+              //reference https://www.w3schools.com/js/js_cookies.asp
+              function getCookie(cname) {
+                let name = cname + "=";
+                let decodedCookie = decodeURIComponent(document.cookie);
+                let ca = decodedCookie.split(';');
+                for(let i = 0; i <ca.length; i++) {
+                  let c = ca[i];
+                  while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                  }
+                  if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                  }
+                }
+                return "";
+              }
+      
+      
+            </script>
+          </span>
         </div>
       </nav>
     <main>

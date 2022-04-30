@@ -3,6 +3,7 @@
 let bgColor = 126;
 
 let snake = [];
+let cookieJar;
 
 let gameHeight;
 let gameWidth;
@@ -25,6 +26,7 @@ let restartButton;
 let pauseButton;
 
 let endGame = false;
+let scoreIsUpdated = false;
 
 let foodX;
 let foodY;
@@ -36,6 +38,7 @@ let previousX;
 let previousY;
 
 function setup() {
+    points = getCookie("points");
     i = min(windowWidth/2, windowHeight/2)
     createCanvas(i,i);
     textSize(50);
@@ -181,18 +184,33 @@ function createFood(){
 }
 
 function gameOver(){
+    
+
     headX = gameWidth;
     headY = gameHeight;
     gameEnd = true;
     foodBool = false;
     textAlign(CENTER);
     text("Game Over!", gameWidth/2, gameHeight/2);
+
+    print(points);
+    if(scoreIsUpdated == false){
+      points = parseInt(points);
+      points += score;
+      scoreIsUpdated = true;
+    }
+    
+    print(score);
+    print(points);
+    setCookie("points",points,30);
 }
 
 function restart(){
   //restartButton.remove();
   headX = gameWidth/2;
   headY = gameHeight/2;
+
+  scoreIsUpdated = false;
 
   snake = [];
   snake.push("1");
@@ -201,4 +219,29 @@ function restart(){
 function pause(){
     noLoop();
 }
+
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue +  ";visited=true;" + expires + ";path=/";
+  }
+
+//reference https://www.w3schools.com/js/js_cookies.asp
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
 

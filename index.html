@@ -14,10 +14,20 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
+
+
+
 </header>
 
 <body>
+  <script type="text/Javascript">
+    if (document.cookie.indexOf('visited=true') == 1) {
+      var thirtydays = 1000*60*60*24*30;
+      var expires = new Date((new Date()).valueOf() +  thirtydays);
+      document.cookie = "username=recruiter;visited=true;expires=" +  expires.toUTCString();
+      document.cookie = "points=0;visited=true;expires=" +  expires.toUTCString();
+    }  
+  </script>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Aliannea Sherman</a>
@@ -45,8 +55,41 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/xistingsherman">Github</a>
         </li>
+        
+        
       </ul>
+        <span class="span">
+          <script type="text/JavaScript">
+            
+            let username = getCookie("username");
+            let points = getCookie("points");
+
+            $(".span").html("Hello, " + username + ". You've racked up " + points + " points.");
+    
+            //reference https://www.w3schools.com/js/js_cookies.asp
+            function getCookie(cname) {
+              let name = cname + "=";
+              let decodedCookie = decodeURIComponent(document.cookie);
+              let ca = decodedCookie.split(';');
+              for(let i = 0; i <ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                  c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                  return c.substring(name.length, c.length);
+                }
+              }
+              return "";
+            }
+    
+    
+          </script>
+        </span>
+      
+
     </div>
+
   </nav>
 
 <div class="container">
