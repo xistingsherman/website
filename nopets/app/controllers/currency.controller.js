@@ -9,7 +9,7 @@ exports.create = (req, res) => {
   }
   // Create a Currency
   const currency = new Currency({
-    id: req.body.id,
+    userId: req.body.userI+d,
     currency: req.body.currency,
   });
   // Save Currency in the database

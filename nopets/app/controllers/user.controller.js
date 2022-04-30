@@ -58,6 +58,24 @@ exports.findOne = (req, res) => {
     } else res.send(data);
   });
 };
+
+
+// Find a single User with a id
+exports.findOneUser = (req, res) => {
+  User.findByUsername(req.params.username, (err, data) => {
+    if (err) {
+      if (err.kind === "not_found") {
+        res.status(404).send({
+          message: `Not found User with username ${req.params.username}.`
+        });
+      } else {
+        res.status(500).send({
+          message: "Error retrieving User with id " + req.params.username
+        });
+      }
+    } else res.send(data);
+  });
+};
 // Update a User identified by the id in the request
 exports.update = (req, res) => {
   // Validate Request

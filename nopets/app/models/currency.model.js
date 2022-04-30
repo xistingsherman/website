@@ -3,19 +3,18 @@ const sql = require("./db.js");
 
 // constructor
 const Currency = function(Currency) {
+  this.userId = Currency.userId;
   this.currency = Currency.currency;
 };
-Currency.create = (id, newCurrency, result) => {
-  sql.query("INSERT INTO user_currency SET userId = ?, currency = ?", 
-  [id, newCurrency.currency], 
-  (err, res) => {
+Currency.create = (newCurrency, result) => {
+  sql.query("INSERT INTO user_currency SET ?", newCurrency, (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(err, null);
       return;
     }
-    console.log("created Currency: ", { id: res.insertId, ...newCurrency });
-    result(null, { id: res.insertId, ...newCurrency });
+    console.log("created Item: ", { ...newCurrency });
+    result(null, { ...newCurrency });
   });
 };
 

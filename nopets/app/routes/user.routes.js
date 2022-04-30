@@ -11,6 +11,6 @@ module.exports = app => {
     router.get("/:id", users.findOne);
     // Update a User with id
     router.put("/:id", users.update);
-
+    
     app.use('/api/users', router);
 }
