@@ -1,7 +1,11 @@
-//haven't gotten tail to follow yet
+
+//https://github.com/processing/p5.js/wiki/Positioning-your-canvas
 let bgColor = 126;
 
 let snake = [];
+
+let gameHeight;
+let gameWidth;
 
 let gapX;
 let gapY;
@@ -32,14 +36,19 @@ let previousX;
 let previousY;
 
 function setup() {
-    createCanvas(600, 600);
+    i = min(windowWidth/2, windowHeight/2)
+    createCanvas(i,i);
     textSize(50);
     noCursor();
     frameRate(8);
     
+    gameHeight = height - 65;
+    gameWidth = width;
 
-    headX = width/2;
-    headY = height/2;
+    headX = gameWidth/2;
+    headY = gameHeight/2;
+
+    score = 0;
 
     snake.push(createVector(headX,headY));
 
@@ -48,19 +57,31 @@ function setup() {
 
 
     pauseButton = createButton("Pause");
-    pauseButton.position(width/2, 0);
+    pauseButton.position(width/2 -20 - 40, height + 80);
     pauseButton.mousePressed(pause);
 
     restartButton = createButton("Restart");
-    //restartButton.position(0, 0);
+    restartButton.position(width/2 -20 + 30, height+ 80);
     restartButton.mousePressed(restart);
-
 
 }
 
 function draw() {
     // Background color gray
     background(bgColor);
+
+    push();
+    fill(0,0,0,127);
+    rect(0, 0, gameWidth, gameHeight);
+    pop();
+
+    push();    
+    textSize(40);
+    textAlign(CENTER);
+    text('SCORE', width - 200, height - 20);
+    text(score, width - 40, height - 20);
+    pop();
+    
     noStroke();
 
     if(foodBool){
@@ -77,7 +98,7 @@ function draw() {
     headX = headX - x;
     headY = headY - y;
 
-    if(headX < width - ballSize/2 && headX > ballSize/2 && headY < height - ballSize/2 && headY > ballSize/2){
+    if(headX < width - ballSize/2 && headX > ballSize/2 && headY < gameHeight - ballSize/2 && headY > ballSize/2){
         snake.pop();
         snake.unshift(createVector(headX,headY));
 
@@ -154,27 +175,24 @@ function eatFood(headX,headY){
 
 function createFood(){  
   foodBool = true;
-  foodX = random(10, width-foodSize);
-  foodY = random(10, height-foodSize);
+  foodX = random(10, gameWidth-foodSize);
+  foodY = random(10, gameHeight-foodSize);
   foodColor = color(random(0,255),random(0,255),random(0,255))
 }
 
 function gameOver(){
-    headX = width;
-    headY = height;
+    headX = gameWidth;
+    headY = gameHeight;
     gameEnd = true;
     foodBool = false;
     textAlign(CENTER);
-    text("Game Over!", width/2, height/2);
-    //restartButton = createButton("Restart");
-    //restartButton.position(0, 0);
-    //restartButton.mousePressed(restart);
+    text("Game Over!", gameWidth/2, gameHeight/2);
 }
 
 function restart(){
   //restartButton.remove();
-  headX = width/2;
-  headY = height/2;
+  headX = gameWidth/2;
+  headY = gameHeight/2;
 
   snake = [];
   snake.push("1");
@@ -183,3 +201,4 @@ function restart(){
 function pause(){
     noLoop();
 }
+
