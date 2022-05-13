@@ -1,4 +1,3 @@
-
 //https://github.com/processing/p5.js/wiki/Positioning-your-canvas
 let bgColor = 126;
 
@@ -38,7 +37,8 @@ let previousX;
 let previousY;
 
 function setup() {
-    points = getCookie("points");
+    
+
     i = min(windowWidth/2, windowHeight/2)
     createCanvas(i,i);
     textSize(50);
@@ -74,7 +74,8 @@ function draw() {
     background(bgColor);
 
     push();
-    fill(0,0,0,127);
+    fill(153,158,155,127);
+
     rect(0, 0, gameWidth, gameHeight);
     pop();
 
@@ -131,9 +132,7 @@ function draw() {
 
 function keyPressed() {
     //update this to change speed of the snake
-    if((keyCode === LEFT_ARROW || key =="a") && x != -ballSize){
-        print(x)
-        
+    if((keyCode === LEFT_ARROW || key =="a") && x != -ballSize){        
         x = ballSize;
         
         y = 0;
@@ -173,19 +172,16 @@ function eatFood(headX,headY){
   snake.unshift([headX,headY]);
 
   createFood();
-  //print(score);
 }
 
 function createFood(){  
   foodBool = true;
-  foodX = random(10, gameWidth-foodSize);
-  foodY = random(10, gameHeight-foodSize);
+  foodX = random(20, gameWidth-foodSize-20);
+  foodY = random(20, gameHeight-foodSize-20);
   foodColor = color(random(0,255),random(0,255),random(0,255))
 }
 
 function gameOver(){
-    
-
     headX = gameWidth;
     headY = gameHeight;
     gameEnd = true;
@@ -193,23 +189,25 @@ function gameOver(){
     textAlign(CENTER);
     text("Game Over!", gameWidth/2, gameHeight/2);
 
-    print(points);
     if(scoreIsUpdated == false){
+      points = getCookie("points");
       points = parseInt(points);
+      if(points == "NaN" || points == "" || points == NaN){
+        setCookie("points",0);
+        points = 0;
+      }
+      
       points += score;
+      setCookie("points",points);
       scoreIsUpdated = true;
     }
-    
-    print(score);
-    print(points);
-    setCookie("points",points,30);
 }
 
 function restart(){
   //restartButton.remove();
   headX = gameWidth/2;
   headY = gameHeight/2;
-
+  score = 0;
   scoreIsUpdated = false;
 
   snake = [];
@@ -220,11 +218,8 @@ function pause(){
     noLoop();
 }
 
-function setCookie(cname, cvalue, exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    let expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue +  ";visited=true;" + expires + ";path=/";
+function setCookie(cname, cvalue) {
+    document.cookie = cname + "=" + cvalue + ";path=../..";
   }
 
 //reference https://www.w3schools.com/js/js_cookies.asp
