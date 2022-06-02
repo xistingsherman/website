@@ -27,7 +27,7 @@
   color: #FFF;
   text-decoration: none;
 }
-.btn:hover, .btn-primary:hover{
+.btn:hover, .btn-primary:hover, .nav-link:hover{
   background-color: #703F8A;
   border-color: #703F8A;
   color: #FFF;
@@ -71,6 +71,8 @@ div{
 }
 #headshot{
   padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 #examples{
   margin: 20px 0 10px 0;

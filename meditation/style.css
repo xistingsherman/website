@@ -1,0 +1,34 @@
+.bg-light{
+    background-color: #445D6E !important;
+    text-decoration: none !important;
+  }
+  .navbar-brand, .navbar-link, .nav-link, .navbar-light{
+    color: #FFF !important;
+    text-decoration: none !important;
+  }
+
+button{
+    background-color: #445D6E;
+    border-color: #445D6E;
+    color: #FFF;
+    text-decoration: none;
+  }
+  button:hover, button:hover, .nav-link:hover{
+    background-color: #703F8A;
+    border-color: #703F8A;
+    color: #FFF;
+  }
+  main{
+      margin-right: auto;
+      margin-left: auto;
+      padding-top:10px;
+  }
+
+  body {
+    color: #2E3F4A;
+   background-color: #8aabc1ab;
+    font-family: "Open Sans";
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 10%;
+  }
