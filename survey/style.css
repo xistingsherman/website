@@ -37,3 +37,12 @@ button{
     margin-left:auto;
     margin-right:auto;
   }
+
+  .btn, .btn-primary{
+    background-color: #445D6E;
+    border-color: #445D6E;
+    color: #FFF;
+    text-decoration: none;
+    margin: 20px 10px;
+    width: 30%;
+  }

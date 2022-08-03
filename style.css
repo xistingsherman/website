@@ -26,6 +26,8 @@
   border-color: #445D6E;
   color: #FFF;
   text-decoration: none;
+  margin: auto;
+  width: 75%;
 }
 .btn:hover, .btn-primary:hover, .nav-link:hover{
   background-color: #703F8A;
@@ -34,7 +36,7 @@
 }
 .card{
   background-color: #93C9ED;
-  text-align: justify;
+  text-align: center;
 }
 a.disabled {
   pointer-events: none;
@@ -53,10 +55,19 @@ body {
   text-align: center;
   font-size: 1em;
   margin-bottom: 10%;
+
+}
+h3 {
+  font-family: "Open Sans";
+  margin: 20px 10px;
+  text-align: center;
+  font-weight: 600;
 }
 h2 {
   font-family: "Open Sans";
-  margin: 20px 10px;
+  margin: 5px 10px;
+  text-align: center;
+  font-weight: 500;
 }
 h1{
   margin: 0 auto;
@@ -71,8 +82,7 @@ div{
 }
 #headshot{
   padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px 10px;
 }
 #examples{
   margin: 20px 0 10px 0;
@@ -112,8 +122,12 @@ b{
   margin-left: 10px;
   margin-right:10px;
 }
-h5.card-title{
-  font-weight:800 !important;
+
+h4.card-title {
+  font-weight: 800 !important;
+  margin: 10px auto;
+  width: 100%;
+  text-align: center;
 }
 
 .apps{
