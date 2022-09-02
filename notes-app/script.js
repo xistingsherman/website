@@ -46,7 +46,8 @@ function addNewNote(text = ''){
         updateLS()
     })
 
-    document.body.appendChild(note)
+    var code = document.getElementById('notepad')
+    code.appendChild(note)
 }
 
 function clearAllNotes(){

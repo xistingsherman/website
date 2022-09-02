@@ -5,19 +5,23 @@
 }
 
 body{
-    background-color: #7bdaf3;
+    background-color: #efefbb;
+    background: linear-gradient(to right, #d4d3dd,#efefbb);
+    color: #444;
     font-family: 'Poppins', sans-serif;
-    display: flex;
+    margin: 0;
+}
+
+body #notepad{
+    display:flex;
     flex-wrap: wrap; /*notes go to next line when needed*/
     align-items: center;
-    margin: 0;
-    padding-top: 3rem;
 }
 
 .add{
     position: fixed;
-    top: 1rem; /*default 16 px*/
-    right: 10rem;
+    top: 4rem; /*default 16 px*/
+    right: 12rem;
     background-color: #9ec862;
     border-radius: 3px;
     padding: 0.5rem 1rem;
@@ -26,7 +30,7 @@ body{
 }
 .clear{
     position: fixed;
-    top: 1rem; /*default 16 px*/
+    top: 4rem; /*default 16 px*/
     right: 1rem;
     background-color: #9ec862;
     border-radius: 3px;
