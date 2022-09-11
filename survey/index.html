@@ -74,6 +74,18 @@
       <div class="questions">
       <p>Welcome back to the Swim Lesson Program at the recreation center! We are excited to get back in the water and teach the community a balance between learning how to swim and having fun. The water is a great equalizer amongst our diverse community and we want everyone to be able to enjoy the water safely. It is our mission to make sure that every person is water safe. Quality swim lessons save lives.<br/> <br/><b>Take this questionnaire to find out which class to sign up for!</b></p>
 
+      <div class="container">
+      <div class="progress-container">
+        <div class="progress" id="progress"></div>
+        <div class="circle active">1</div>
+        <div class="circle">2</div>
+        <div class="circle">3</div>
+        <div class="circle">4</div>
+        <div class="circle">5</div>
+
+      </div>
+      
+</div>
         <h2>What is the Swimmer's name?</h2>
         <form>
           <label for="fname">First name:</label>
@@ -673,13 +685,16 @@
           <p>This course is designed to provide Triathletes with an experienced coach while they train for their next Triathlon. Long distance swimming will be emphasized while the instructor breaks down everyone’s stroke so that they swim as efficiently as possible.</p>
       </div>
 
+      <button class="btn" id="prev" disabled>Previous</button>
+      <button class="btn" id="next">Next</button> <br>
 
-      <input type="button" id='next' value="Next" onclick="next()">
+
+      <input type="button" class="btn" id='next' value="Next" onclick="next()">
       <br /><br/>
       <div id="answer">Your result will show up here!</div>
       <br />
 
-      <input type="button" id='reset' value="Reset" onclick="reset()">
+      <input type="button" class="btn" id='reset' value="Reset" onclick="reset()">
       <br />
 
     </div>
